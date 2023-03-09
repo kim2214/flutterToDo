@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertodo/pages/NewToDoPage.dart';
 import 'package:get/get.dart';
 
 import 'firstPage.dart';
@@ -15,6 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+      getPages: [
+        GetPage(
+          name: '/addPage',
+          page: () => NewToDoPage(),
+        ),
+      ],
       theme: ThemeData(
         // This is the theme of your application.
         //

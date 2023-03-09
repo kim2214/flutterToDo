@@ -17,7 +17,7 @@ class FirstPage extends StatelessWidget {
           children: [
             Expanded(
               child:
-              // Obx(() =>
+              Obx(() =>
 
                   ListView.builder(
                 itemCount: todoController.todos.length,
@@ -25,18 +25,18 @@ class FirstPage extends StatelessWidget {
                   ToDo todo = todoController.todos[index];
                   return ListTile(
                     title: Text(todo.title!),
-                    // trailing: IconButton(
-                    //   icon: Icon(Icons.delete),
-                    //   onPressed: () => todoController.remove(todo.id),
-                    // ),
+                    trailing: IconButton(
+                      icon: Icon(Icons.delete),
+                      onPressed: () => todoController.remove(todo.id),
+                    ),
                   );
                 },
               )),
-            // ),
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
-                onPressed: () => Get.toNamed('/add-todo'),
+                onPressed: () => Get.toNamed('/addPage'),
                 child: Text('Add Todo'),
               ),
             ),
